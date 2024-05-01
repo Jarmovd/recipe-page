@@ -55,7 +55,7 @@
     font-size: 34px;
   }
 }
-#recipe h2 {
+#recipe h3 {
   font-size: 28px;
   font-family: "Young Serif", sans-serif;
   color: hsl(14, 45%, 36%);
@@ -109,10 +109,11 @@
     padding: 20px;
   }
 }
-#recipe_preparation h3 {
+#recipe_preparation h2 {
   color: hsl(332, 51%, 32%);
   padding-bottom: 20px;
   line-height: 1;
+  font-size: 20px;
 }
 #recipe_preparation ul li {
   padding-bottom: 10px;
