@@ -14,7 +14,7 @@
 body {
   font-family: $font-outfit;
   background-color: $eggshell;
-  height: 100%;
+  min-height: 100vh;
   @include flex-center();
   align-items: center;
   font-size: 16px;
