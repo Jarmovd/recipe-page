@@ -1,0 +1,29 @@
+/* file import */
+@import "font";
+@import "variables";
+@import "mixins";
+@import "recipe";
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-outfit;
+  background-color: $eggshell;
+  height: 100%;
+  @include flex-center();
+  align-items: center;
+  font-size: 16px;
+
+  main {
+    padding: 40px 20px;
+
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+  }
+}

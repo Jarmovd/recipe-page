@@ -1,0 +1,155 @@
+#recipe {
+  max-width: 730px;
+  background-color: $white;
+  @include flex-center();
+  border-radius: 20px;
+  color: $dark-charcoal;
+
+  &_content {
+    padding: 40px;
+    line-height: 1.5;
+
+    @media (max-width: $mobile) {
+      padding: 30px;
+    }
+  }
+
+  &_img {
+    padding: 40px 40px 0 40px;
+
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+
+      @media (max-width: $mobile) {
+        border-radius: 0;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    font-family: $font-young;
+    font-weight: 500;
+    padding-bottom: 20px;
+    line-height: 1;
+
+    @media (max-width: $mobile) {
+      font-size: 34px;
+    }
+  }
+
+  h2 {
+    font-size: 28px;
+    font-family: $font-young;
+    color: $nutmeg;
+    font-weight: 500;
+    padding-bottom: 20px;
+    line-height: 1;
+  }
+
+  ul,
+  ol {
+    li {
+      list-style-type: none;
+      padding-bottom: 10px;
+      padding-left: 40px;
+      position: relative;
+
+      &::before {
+        content: "\2022";
+        color: $nutmeg;
+        font-size: 20px;
+        position: absolute;
+        top: -2px;
+        left: 7px;
+      }
+      span {
+        color: $dark-charcoal;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: li;
+    li {
+      counter-increment: li;
+      &::before {
+        font-size: 16px;
+        content: counter(li) ".";
+        font-weight: 600;
+        top: 0;
+      }
+    }
+  }
+
+  &_intro {
+    padding-bottom: 40px;
+  }
+  &_preparation {
+    padding: 30px;
+    background-color: $rosewhite;
+    border-radius: 10px;
+
+    @media (max-width: $mobile) {
+      padding: 20px;
+    }
+
+    h3 {
+      color: $dark-raspberry;
+      padding-bottom: 20px;
+      line-height: 1;
+    }
+    ul {
+      li {
+        padding-bottom: 10px;
+        padding-left: 40px;
+
+        &::before {
+          color: $dark-raspberry;
+        }
+      }
+    }
+  }
+  &_ingredients,
+  &_instructions,
+  &_nutrition {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $lightgrey;
+  }
+  &_nutrition {
+    border-bottom: none;
+    padding-bottom: 0;
+
+    p {
+      padding-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      tbody {
+        tr {
+          border-bottom: 1px solid $lightgrey;
+
+          &:last-child {
+            border-bottom: none;
+          }
+          td {
+            padding: 10px 10px 10px 30px;
+            &:last-child {
+              color: $nutmeg;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
